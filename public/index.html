@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1 id="greeting">Welcome To Web Engineering Lab</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home" aria-current="location">Home</a>
+                </li>
+                <li>
+                    <a href="#blogs">Blogs</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section id="home">
+            <h2>Office Hours</h2>
+
+            <figure>
+                <svg role="img"
+                     aria-labelledby="clock-title"
+                     width="80"
+                     height="80"
+                     viewBox="0 0 100 100">
+                    <title id="clock-title">Office hours clock</title>
+                    <circle cx="50" cy="50" r="40"
+                            fill="none"
+                            stroke="black"
+                            stroke-width="4" />
+                    <line x1="50" y1="50" x2="50" y2="25"
+                          stroke="black"
+                          stroke-width="4" />
+                    <line x1="50" y1="50" x2="70" y2="50"
+                          stroke="black"
+                          stroke-width="4" />
+                </svg>
+
+                <figcaption>Our office hours are shown below.</figcaption>
+            </figure>
+
+            <table>
+                <caption>Office hours table</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Opening time</th>
+                        <th scope="col">Closing time</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td><time datetime="09:00">9:00 AM</time></td>
+                        <td><time datetime="17:00">5:00 PM</time></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td><time datetime="09:00">9:00 AM</time></td>
+                        <td><time datetime="17:00">5:00 PM</time></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td><time datetime="09:00">9:00 AM</time></td>
+                        <td><time datetime="17:00">5:00 PM</time></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <svg aria-hidden="true"
+             width="100%"
+             height="20"
+             viewBox="0 0 400 20">
+            <line x1="0"
+                  y1="10"
+                  x2="400"
+                  y2="10"
+                  stroke="black"
+                  stroke-width="2" />
+        </svg>
+
+        <section id="blogs">
+            <h2>Send Feedback</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required
+                       aria-describedby="email-hint">
+
+                <small id="email-hint">
+                    Enter a valid email address.
+                </small>
+
+                <br><br>
+
+                <fieldset>
+                    <legend>Topic</legend>
+
+                    <input type="radio"
+                           id="general"
+                           name="topic"
+                           value="general"
+                           required>
+                    <label for="general">General</label>
+
+                    <input type="radio"
+                           id="suggestion"
+                           name="topic"
+                           value="suggestion">
+                    <label for="suggestion">Suggestion</label>
+
+                    <input type="radio"
+                           id="complaint"
+                           name="topic"
+                           value="complaint">
+                    <label for="complaint">Complaint</label>
+                </fieldset>
+
+                <br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          cols="40"
+                          required></textarea>
+
+                <br><br>
+
+                <button type="submit">Send Feedback</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <address>
+            Contact us at:<br>
+            Email:
+            <a href="mailto:abuzar0211@gmail.com">
+                abuzar0211@gmail.com
+            </a>
+            <br>
+            Phone:
+            <a href="tel:+923254876899">
+                +92 325 4876899
+            </a>
+        </address>
+    </footer>
+
+</body>
+</html>
