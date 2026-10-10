@@ -1,0 +1,118 @@
+
+@layer reset, base, components, utilities;
+
+@layer reset {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+}
+
+@layer base {
+    :root {
+        color-scheme: light dark;
+
+        --space: 1rem;
+        --color-bg: light-dark(oklch(100% 0 0), oklch(20% 0 0));
+        --color-text: light-dark(oklch(20% 0 0), oklch(95% 0 0));
+        --color-accent: light-dark(oklch(45% 0.16 260), oklch(80% 0.12 260));
+        --color-surface: light-dark(oklch(97% 0 0), oklch(28% 0 0));
+        --color-border: color-mix(in oklch, var(--color-text) 30%, var(--color-bg));
+        --color-muted: color-mix(in oklch, var(--color-text) 75%, var(--color-bg));
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+    }
+
+    a {
+        color: var(--color-accent);
+    }
+
+    h1,
+    h2 {
+        color: var(--color-text);
+        margin-block: var(--space);
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        font: inherit;
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 3px;
+    }
+}
+
+@layer components {
+    main {
+        max-inline-size: 1000px;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        list-style: none;
+        padding-inline: 20px;
+    }
+
+    .nav-link {
+        color: var(--color-accent);
+    }
+
+    .nav-link:hover {
+        text-decoration-thickness: 2px;
+    }
+
+    form p {
+        margin-block: 0.5rem 1rem;
+    }
+
+    label {
+        display: inline-block;
+        margin-inline-end: 0.5rem;
+    }
+
+    input {
+        max-inline-size: 100%;
+    }
+
+    .skip-link {
+        background-color: var(--color-surface);
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+        padding: var(--space);
+    }
+
+    button {
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--color-text);
+        color: var(--color-bg);
+    }
+}
+
+@layer utilities {
+    .text-muted {
+        color: var(--color-muted);
+    }
+}
