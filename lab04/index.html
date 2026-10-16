@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering Lab 04</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <header id="home">
+        <h1>Web Engineering</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#schedule">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <figure>
+            <img src="task.png" alt="Web Engineering icon">
+            <figcaption>Web Engineering Lab 04</figcaption>
+        </figure>
+
+        <section id="schedule" aria-labelledby="schedule-heading">
+            <h2 id="schedule-heading" class="span-all">Class Schedule</h2>
+
+            <div>
+                <h3>HTML</h3>
+                <p>Learn HTML basics.</p>
+            </div>
+
+            <div>
+                <h3>CSS</h3>
+                <p>Learn CSS styling.</p>
+            </div>
+
+            <table class="span-all">
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td>HTML</td>
+                        <td><button type="button" data-day="Monday">Book</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td>CSS</td>
+                        <td><button type="button" data-day="Tuesday">Book</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td>JavaScript</td>
+                        <td><button type="button" data-day="Wednesday">Book</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thursday</th>
+                        <td>DOM</td>
+                        <td><button type="button" data-day="Thursday">Book</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p id="booking-status" class="span-all" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="about">
+            <h2>About This Lab</h2>
+            <p>Practice Flexbox, CSS Grid, JavaScript modules and DOM events.</p>
+        </section>
+
+        <form id="contact">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email">
+            </fieldset>
+
+            <p class="span-all">Please fill in your information.</p>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
