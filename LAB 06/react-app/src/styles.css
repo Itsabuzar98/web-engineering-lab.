@@ -1,0 +1,128 @@
+/* TASK 6: Global styles and application layout */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: #164e9b;
+  font-size: clamp(28px, 5vw, 38px);
+  margin: 12px 0;
+}
+
+h2 {
+  color: #1e3a8a;
+}
+
+.status-message {
+  color: #166534;
+}
+
+.summary {
+  padding: 12px 18px;
+  margin: 20px 0;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+.slot-table {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.slot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+}
+
+.available {
+  background: #dcfce7;
+}
+
+.booked {
+  background: #fee2e2;
+}
+
+.slot-time {
+  font-weight: 700;
+}
+
+.slot-status {
+  font-size: 14px;
+}
+
+.slot-row button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.slot-row button:hover {
+  background: #1e40af;
+}
+
+.slot-row button:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 0;
+  }
+
+  .slot-table {
+    padding: 14px;
+  }
+
+  .slot-row {
+    align-items: flex-start;
+  }
+}
