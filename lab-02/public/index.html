@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Lab 02 - Semantic HTML and Accessibility Foundations">
+
+    <title>Lab 02 - Accessibility Foundations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Task 1: Skip link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+
+    <!-- Task 1: Header and navigation -->
+    <header id="header-content">
+
+        <h1 id="greeting">Welcome to Lab 02</h1>
+
+        <nav aria-label="Main navigation">
+            <ul id="nav-content">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#office-hours" aria-current="location">Office Hours</a></li>
+                <li><a href="#feedback">Send Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Task 2: Main content -->
+    <main id="main-content">
+
+        <!-- Task 3: Office Hours section -->
+        <section id="office-hours">
+
+            <h2>Office Hours</h2>
+
+            <div class="office-content">
+
+                <!-- Task 4: Informative inline SVG -->
+                <figure>
+
+                    <svg
+                        role="img"
+                        viewBox="0 0 100 100"
+                        width="100"
+                        height="100"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <title>Office clock showing working hours</title>
+
+                        <circle
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="lightblue"
+                            stroke="blue"
+                            stroke-width="3"/>
+
+                        <line
+                            x1="50"
+                            y1="50"
+                            x2="50"
+                            y2="25"
+                            stroke="black"
+                            stroke-width="3"
+                            stroke-linecap="round"/>
+
+                        <line
+                            x1="50"
+                            y1="50"
+                            x2="70"
+                            y2="50"
+                            stroke="black"
+                            stroke-width="3"
+                            stroke-linecap="round"/>
+
+                        <circle
+                            cx="50"
+                            cy="50"
+                            r="3"
+                            fill="black"/>
+
+                    </svg>
+
+                    <figcaption>
+                        Office working hours and schedule
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- Accessible Office Hours table -->
+                <table id="table-content">
+
+                    <caption>Weekly Office Hours Schedule</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Opening Time</th>
+                            <th scope="col">Closing Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">Monday</th>
+                            <td>
+                                <time datetime="09:00">9:00 AM</time>
+                            </td>
+                            <td>
+                                <time datetime="17:00">5:00 PM</time>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Tuesday</th>
+                            <td>
+                                <time datetime="09:00">9:00 AM</time>
+                            </td>
+                            <td>
+                                <time datetime="17:00">5:00 PM</time>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Wednesday</th>
+                            <td>
+                                <time datetime="10:00">10:00 AM</time>
+                            </td>
+                            <td>
+                                <time datetime="16:00">4:00 PM</time>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+                
+            </div>
+
+        </section>
+
+
+        <!-- Task 4: Decorative SVG divider -->
+        <svg
+            aria-hidden="true"
+            viewBox="0 0 300 20"
+            width="300"
+            height="20"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <line
+                x1="0"
+                y1="10"
+                x2="300"
+                y2="10"
+                stroke="blue"
+                stroke-width="2"/>
+
+            <circle
+                cx="150"
+                cy="10"
+                r="6"
+                fill="blue"/>
+
+        </svg>
+
+
+        <!-- Task 5, 6 and 7: Send Feedback section -->
+        <section id="feedback">
+
+            <h2>Send Feedback</h2>
+
+            <form action="#" method="post">
+
+                <!-- Name field -->
+                <div>
+                    <label for="name">Your Name:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required>
+                </div>
+
+
+                <!-- Email field with hint -->
+                <div>
+                    <label for="email">Your Email:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        aria-describedby="email-hint"
+                        required>
+
+                    <small id="email-hint">
+                        Enter a valid email address, for example
+                        example@gmail.com.
+                    </small>
+                </div>
+
+
+                <!-- Task 6: Topic radio group -->
+                <fieldset>
+
+                    <legend>Topic</legend>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="general"
+                            name="topic"
+                            value="general"
+                            required>
+
+                        <label for="general">General Inquiry</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="suggestion"
+                            name="topic"
+                            value="suggestion">
+
+                        <label for="suggestion">Suggestion</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="technical"
+                            name="topic"
+                            value="technical">
+
+                        <label for="technical">Technical Issue</label>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Task 6: Message textarea -->
+                <div>
+                    <label for="message">Your Message:</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        cols="40"
+                        placeholder="Write your feedback here..."
+                        required></textarea>
+                </div>
+
+
+                <!-- Submit button -->
+                <button type="submit">
+                    Send Feedback
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Task 2: Footer and contact details -->
+    <footer id="contact">
+
+        <address>
+
+            <p>
+                Phone:
+                <a href="tel:+923251829199">
+                    +92 325 1829199
+                </a>
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:abuzar@gmail.com">
+                    abuzar@gmail.com
+                </a>
+            </p>
+
+        </address>
+
+        <p>
+            &copy; 2026 Web Engineering Lab 02.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

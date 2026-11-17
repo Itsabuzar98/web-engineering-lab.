@@ -1,0 +1,304 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(214, 214, 214);
+    color: #222222;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header,
+main,
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px;
+    border: 2px solid #000000;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+
+#nav-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #003080;
+}
+
+
+/* ==============================
+   4. Keyboard accessibility
+============================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   5. Office Hours table
+============================== */
+
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+th,
+td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+tbody th {
+    background-color: #e5e5e5;
+    color: #222222;
+}
+
+
+/* ==============================
+   6. SVG and figure
+============================== */
+
+.office-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+figure {
+    margin: 10px;
+    text-align: center;
+}
+
+figure svg {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Decorative divider */
+
+#main-content > svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+}
+
+
+/* ==============================
+   7. Feedback form
+============================== */
+
+form {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form > div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==============================
+   8. Radio button group
+============================== */
+
+fieldset {
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+fieldset div {
+    margin: 8px 0;
+}
+
+fieldset input[type="radio"] {
+    margin-right: 8px;
+}
+
+fieldset label {
+    display: inline;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   9. Email hint
+============================== */
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #444444;
+}
+
+
+/* ==============================
+   10. Submit button
+============================== */
+
+button[type="submit"] {
+    background-color: #0645ad;
+    color: #ffffff;
+    border: 2px solid #0645ad;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #003080;
+    border-color: #003080;
+}
+
+
+/* ==============================
+   11. Footer
+============================== */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #555555;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer a {
+    font-weight: bold;
+}
+
+
+/* ==============================
+   12. Responsive design
+============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    #nav-content {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .office-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
+
+    form {
+        padding: 12px;
+    }
+}
