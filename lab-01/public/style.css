@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(214, 214, 214);
+    
+}
+
+#nav_content{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+a:focus-visible{
+    outline: 3px solid blue;
+    outline-offset: 3px;
+}
+a:hover{
+    color: blue;
+}
