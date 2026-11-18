@@ -1,0 +1,54 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-bg: lightgray;
+    --color-accent: blue;
+}
+
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+h1 {
+    grid-column: 1 / 3;
+    color: var(--color-accent);
+}
+
+
+nav a {
+    color: red;
+}
+
+.menu-link {
+    color: green;
+}
